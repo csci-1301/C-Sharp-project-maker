@@ -19,5 +19,5 @@ jobs:
     - name: Save artifact
       uses: actions/upload-artifact@v3
       with:
-          name: project-test
+          name: solution_name.zip
           path: build/solution_name.zip
