@@ -1,5 +1,3 @@
-# make build/Rectangle.zip
-
 ### Source Code
 
 build/%.zip: src/%/*/*.cs
