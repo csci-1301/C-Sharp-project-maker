@@ -13,8 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Run make
-      run: make 
+    - name: Run make for basic example
+      run: make build/solution_name.zip
 
     - name: Save artifact
       uses: actions/upload-artifact@v3
