@@ -1,0 +1,23 @@
+name: Test Release
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Run make
+      run: make 
+
+    - name: Save artifact
+      uses: actions/upload-artifact@v3
+      with:
+          name: project-test
+          path: build/solution_name.zip
