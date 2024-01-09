@@ -1,4 +1,10 @@
-### Source Code
+default: build/solution_name.zip
+
+clean: 
+	rm -rf build/
+	rm -rf src/*/*.sln
+	rm -rf src/*/*/Properties src/*/*/bin src/*/*/obj
+	rm -rf src/*/*/*.csproj
 
 build/%.zip: src/%/*/*.cs
 # The structure of an archive is as follows:
@@ -49,3 +55,4 @@ build/%.zip: src/%/*/*.cs
 	cd $(dir $(patsubst %/,%,$(dir $<)))../ && 7z a ../$@ $(notdir $*)*  -xr\!.vs -xr\!.directory
 # We compress the folder containing the sln and the folder containing the csproj and the code
 # But we exclude the .vs folder and .directory file
+

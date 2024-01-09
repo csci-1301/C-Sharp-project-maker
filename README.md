@@ -95,4 +95,5 @@ We confirm that the solution created using this project work on the following:
 
 OS | IDE | Version
 --- | --- | --- 
-X | Y | Z 
+Debian 12 |  MonoDevelop | 7.8.4
+
