@@ -93,7 +93,8 @@ there are no specification (that we know of) for C# projects, hence the need for
 
 We confirm that the solution created using this project work on the following:
 
-OS | IDE | Version
+OS | IDE | IDE Version | .Net Core SDK Version | .Net Core Runtime Version
 --- | --- | --- 
-Debian 12 | MonoDevelop | 7.8.4
-Debian 12 | JetBrains Rider | 2023.3.2
+Debian 12 | MonoDevelop | 7.8.4 | 8.0.10 | 8.0.0 
+Debian 12 | JetBrains Rider | 2023.3.2 | 8.0.10 | 8.0.0 
+MacOs Sonoma (14.1.1) | Visual Studio for Mac | 2022 | 7.0.308 | 7.0.11
