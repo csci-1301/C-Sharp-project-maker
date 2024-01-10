@@ -1,14 +1,6 @@
 # C# Project Maker
 
-This is a simple Makefile that creates C# projects compatible with any OS / IDE version.
-
-# Pre-requisites
-
-- Some basic knowledge of Makefile,
-- [7zip](https://7-zip.org/),
-- A Unix system (which can be a [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about)).
-
-Alternatively, you can simply clone this repository and have github's action produce the project for you.
+This is a simple Makefile that creates C# projects compatible with any OS / IDE / .NET core versions (that we know of).
 
 # Testing the Project and the C# Project Maker
 
@@ -24,9 +16,20 @@ Alternatively, you can simply clone this repository and have github's action pro
     Hello from Class2
     ```
 
-Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project.
+Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
 
 ## To create the C# project
+
+### Pre-requisites
+
+- Some basic knowledge of Makefile,
+- [7zip](https://7-zip.org/),
+- A Unix system (which can be a [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about)),
+- How to clone or download a repository.
+
+Alternatively, you can simply clone this repository and have github's action produce the project for you.
+
+### Creating a C# project and testing it
 
 To run the example, 
 
@@ -47,7 +50,7 @@ To run the example,
     Hello from Class2
     ```
 
-Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project.
+Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
 
     
 # Instructions to Create a New Project
@@ -94,7 +97,12 @@ there are no specification (that we know of) for C# projects, hence the need for
 We confirm that the solution created using this project work on the following:
 
 OS | IDE | IDE Version | .Net Core SDK Version | .Net Core Runtime Version
---- | --- | --- 
+--- | --- | --- | --- | --- 
 Debian 12 | MonoDevelop | 7.8.4 | 8.0.10 | 8.0.0 
 Debian 12 | JetBrains Rider | 2023.3.2 | 8.0.10 | 8.0.0 
 MacOs Sonoma (14.1.1) | Visual Studio for Mac | 2022 | 7.0.308 | 7.0.11
+
+# Reporting Data
+
+If your OS / IDE combination is not [presented above](#tested-on), we would appreciate it if you could contact us or open a merge request adding your information.
+The command `dotnet --info` may give you the .Net Core SDK and .Net Core Runtime versions,  if not please refer to <https://learn.microsoft.com/en-us/dotnet/core/install/how-to-detect-installed-versions>. 
