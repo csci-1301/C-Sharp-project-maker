@@ -6,7 +6,7 @@ This is a simple Makefile that creates C# projects compatible with any OS / IDE 
 
 ## To test the C# project 
 
-1. Under [our action](https://github.com/csci-1301/C-Sharp-project-maker/actions), look for the last successful workflow run, click on it, and download the `solution_name.zip` file under "Artifacts".
+1. Grab [the `solution_name.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/files/13906926/solution_name.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
 2. Extract `solution_name.zip`,
 4. Open `solution_name/solution_name.sln` with your favorite IDE,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
@@ -27,7 +27,7 @@ Please, open an issue if you cannot reproduce this behavior or if your IDE did n
 - A Unix system (which can be a [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about)),
 - How to clone or download a repository.
 
-Alternatively, you can simply clone this repository and have github's action produce the project for you.
+Alternatively, you can simply clone this repository and have github's action produce the project for you, using [our workflow](https://github.com/csci-1301/C-Sharp-project-maker/blob/main/.github/workflows/makefile.yml).
 
 ### Creating a C# project and testing it
 
