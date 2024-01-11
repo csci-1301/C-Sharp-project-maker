@@ -102,6 +102,7 @@ Debian 12 | MonoDevelop | 7.8.4 | 8.0.10 | 8.0.0
 Debian 12 | JetBrains Rider | 2023.3.2 | 8.0.10 | 8.0.0 
 MacOs Sonoma (14.1.1) | Visual Studio for Mac | 2022 | 7.0.308 | 7.0.11
 Windows 11 | Visual Studio | 2022 | - | - 
+Windows 10 Entreprise (22h2) | Visual Studio | Entreprise 2019 | 5.0.302 | 5.0.8
 
 # Reporting Data
 
