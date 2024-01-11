@@ -101,6 +101,7 @@ OS | IDE | IDE Version | .Net Core SDK Version | .Net Core Runtime Version
 Debian 12 | MonoDevelop | 7.8.4 | 8.0.10 | 8.0.0 
 Debian 12 | JetBrains Rider | 2023.3.2 | 8.0.10 | 8.0.0 
 MacOs Sonoma (14.1.1) | Visual Studio for Mac | 2022 | 7.0.308 | 7.0.11
+Windows 11 | Visual Studio | 2022 | - | - 
 
 # Reporting Data
 
