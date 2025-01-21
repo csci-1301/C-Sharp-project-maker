@@ -61,7 +61,7 @@ build/%.zip: src/%/*/*.cs
 			done;  \
 	(printf  '\t<Compile Include="Properties\AssemblyInfo.cs" />\n  </ItemGroup>\n  <Import Project="$$(MSBuildToolsPath)\Microsoft.CSharp.targets" />\n</Project>\n') >> $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj \
 # We create the Properties\AssemblyInfo.cs file, but note that it can be empty.
-	@touch > $(dir $<)Properties/AssemblyInfo.cs
+	@touch $(dir $<)Properties/AssemblyInfo.cs
 # Finally, we can zip the folder:
 	@cd $(dir $(patsubst %/,%,$(dir $<)))../ && 7z -bso0 -bsp0 a ../$@ $(notdir $*)*  -xr\!.vs -xr\!.directory
 # We compress (silently, thanks to the -bso0 -bsp0 options) the folder containing the sln and the folder containing the csproj and the code
