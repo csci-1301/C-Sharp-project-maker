@@ -14,15 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-           version: [4.5.2, 10.0]
+           v: [4.5.2, 10.0]
     steps:
     - uses: actions/checkout@v4
 
     - name: Run make for basic example
-      run: make build/solution_name_v${{ matrix.version }}.zip
+      run: make build/solution_name_v${{ matrix.v }}.zip
 
     - name: Save artifact
       uses: actions/upload-artifact@v4
       with:
-          name: solution_name_v${{ matrix.version }}.zip
+          name: solution_name_v${{ matrix.v }}.zip
           path: build/*
