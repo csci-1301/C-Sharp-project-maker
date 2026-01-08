@@ -5,9 +5,19 @@ clean:
 	rm -rf src/*/*.sln
 	rm -rf src/*/*/Properties src/*/*/bin src/*/*/obj
 	rm -rf src/*/*/*.csproj
+	
 
-build/%.zip: src/%/*/*.cs
-# The structure of an archive is as follows:
+build/%_v10.0.zip: src/%/*/*.cs
+	@(printf '<Project Sdk="Microsoft.NET.Sdk">\n	<PropertyGroup>\n    <OutputType>Exe</OutputType>\n    <TargetFramework>net10.0</TargetFramework>\n    <ImplicitUsings>enable</ImplicitUsings>\n    <Nullable>enable</Nullable>\n  </PropertyGroup>\n \n</Project>') > $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj 
+	# We now zip the folder:
+	@cd $(dir $(patsubst %/,%,$(dir $<)))../ && 7z -bso0 -bsp0 a ../$@ $(notdir $*)*  -xr\!.vs -xr\!.directory
+# We compress (silently, thanks to the -bso0 -bsp0 options) the folder containing the csproj and the code
+# Finally, we clean the files:
+	@rm $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj
+
+
+build/%_v4.5.2.zip: src/%/*/*.cs
+# The structure of an archive for version v4.5.2 is as follows:
 # └───<Solution>	 	     $(notdir $*)
 #      ├── <Solution.sln>	     $(dir $(patsubst %/,%,$(dir $<)))/$(notdir $*).sln
 #      └── <Project>                 $(dir $<)
@@ -62,7 +72,12 @@ build/%.zip: src/%/*/*.cs
 	(printf  '\t<Compile Include="Properties\AssemblyInfo.cs" />\n  </ItemGroup>\n  <Import Project="$$(MSBuildToolsPath)\Microsoft.CSharp.targets" />\n</Project>\n') >> $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj \
 # We create the Properties\AssemblyInfo.cs file, but note that it can be empty.
 	@touch $(dir $<)Properties/AssemblyInfo.cs
-# Finally, we can zip the folder:
+# We now zip the folder:
 	@cd $(dir $(patsubst %/,%,$(dir $<)))../ && 7z -bso0 -bsp0 a ../$@ $(notdir $*)*  -xr\!.vs -xr\!.directory
 # We compress (silently, thanks to the -bso0 -bsp0 options) the folder containing the sln and the folder containing the csproj and the code
 # But we exclude the .vs folder and .directory file
+# Finally, we clean the files:
+	@rm -rf $(dir $(patsubst %/,%,$(dir $<)))/$(notdir $*).sln 
+	@rm -rf $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj 
+	@rm -rf $(dir $<)Properties 
+	@rm -rf $(dir $<)Properties/AssemblyInfo.cs
