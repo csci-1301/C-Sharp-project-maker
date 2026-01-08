@@ -15,8 +15,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - version: 10.0
-          - version: 4.5.2
+          - version: [10.0, 4.5.2]
     steps:
     - uses: actions/checkout@v4
 
