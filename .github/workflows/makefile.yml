@@ -1,3 +1,6 @@
+# Validate the file using e.g.
+# https://rhysd.github.io/actionlint/
+
 name: Test Release
 
 on:
@@ -7,17 +10,21 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  example-matrix:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        include:
+          - version: 10.0
+          - version: 4.5.2
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Run make for basic example
-      run: make build/solution_name.zip
+      run: make build/solution_name_v${{ matrix.version }}.zip
 
     - name: Save artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-          name: solution_name.zip
-          path: build/solution_name.zip
+          name: solution_name_v${{ matrix.version }}.zip
+          path: build/*
