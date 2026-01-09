@@ -3,6 +3,7 @@
 This is a simple Makefile that creates C# projects compatible with any OS / IDE / .NET core versions (that we know of):
 
 - One project uses the "v4.5.2" `TargetFrameworkVersion`,
+- One project uses "net9.0" `TargetFramework`.
 - One project uses "net10.0" `TargetFramework`.
 
 # Testing the Project and the C# Project Maker
@@ -11,7 +12,7 @@ This is a simple Makefile that creates C# projects compatible with any OS / IDE 
 
 ### For the v4.5.2 Version
 
-1. Grab [the `solution_name_v4.5.2.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.1/solution_name_v4.5.2.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+1. Grab [the `solution_name_v4.5.2.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.2/solution_name_v4.5.2.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
 2. Extract `solution_name_v4.5.2.zip`,
 4. Open `solution_name/solution_name.sln` with your favorite IDE,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
@@ -25,7 +26,7 @@ Please, open an issue if you cannot reproduce this behavior or if your IDE did n
 
 ### For the v9.0 Version
 
-1. Grab [the `solution_name_v9.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/files/13906926/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+1. Grab [the `solution_name_v9.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.2/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
 2. Extract `solution_name_v9.0.zip`,
 4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
@@ -39,7 +40,7 @@ Please, open an issue if you cannot reproduce this behavior or if your IDE did n
 
 ### For the v10.0 Version
 
-1. Grab [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.1/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+1. Grab [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.2/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
 2. Extract `solution_name_v10.0.zip`,
 4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
