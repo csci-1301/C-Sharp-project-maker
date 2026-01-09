@@ -3,7 +3,8 @@
 This is a simple Makefile that creates C# projects compatible with any OS / IDE / .NET core versions (that we know of):
 
 - One project uses the "v4.5.2" `TargetFrameworkVersion`,
-- One project uses "net9.0" `TargetFramework`.
+- One project uses "net8.0" `TargetFramework`,
+- One project uses "net9.0" `TargetFramework`,
 - One project uses "net10.0" `TargetFramework`.
 
 # Testing the Project and the C# Project Maker
@@ -24,24 +25,15 @@ This is a simple Makefile that creates C# projects compatible with any OS / IDE 
 
 Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
 
-### For the v9.0 Version
+### For the v8.0, v9.0 and v10.0 Versions
 
-1. Grab [the `solution_name_v9.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.2/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
-2. Extract `solution_name_v9.0.zip`,
-4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
-5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
+1. Grab either
+
+    - [the `solution_name_v8.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.2/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+    - [the `solution_name_v9.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.2/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+    - [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.2/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
     
-    ```
-    10
-    Hello from Class2
-    ```
-
-Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
-
-### For the v10.0 Version
-
-1. Grab [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.2/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
-2. Extract `solution_name_v10.0.zip`,
+2. Extract the zip file you downloaded,
 4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
     
@@ -88,43 +80,21 @@ To run the example,
 
 Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
 
-### For the v10.0 Version
+### For the v8.0, v9.0 and v10.0 Versions
 
 To run the example, 
 
 0. (Download or clone this program.)
-1. Run
+1. Run one of the following, based on the version you are interested in:
 
     ```
+    make build/solution_name_v8.0.zip
     make build/solution_name_v9.0.zip
-    ```
-
-2. Look into the `build/` folder that was created for a `solution_name_v9.0.zip` file.
-3. Extract `solution_name_v9.0.zip`,
-4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
-5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
-    
-    ```
-    10
-    Hello from Class2
-    ```
-
-Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
-
-
-### For the v10.0 Version
-
-To run the example, 
-
-0. (Download or clone this program.)
-1. Run
-
-    ```
     make build/solution_name_v10.0.zip
     ```
 
-2. Look into the `build/` folder that was created for a `solution_name_v10.0.zip` file.
-3. Extract `solution_name_v10.0.zip`,
+2. Look into the `build/` folder that was created for a `solution_name_v8.0.zip`, `solution_name_v9.0.zip` or `solution_name_v10.0.zip` file.
+3. Extract the zip file,
 4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
     
@@ -147,7 +117,14 @@ To create a new project:
     ```
     make build/sol-xx_v4.5.2.zip
     ```
-
+    
+    or 
+    
+    
+    ```
+    make build/sol-xx_v8.0.zip
+    ```
+    
     or 
     
     ```
@@ -160,7 +137,7 @@ To create a new project:
     make build/sol-xx_v10.0.zip
     ```
     
-- Check that the file `build/sol-xx_v4.5.2.zip`, `build/sol-xx_v9.0.zip` or `build/sol-xx_v10.0.zip` was correctly created and can be opened with your IDE.
+- Check that the file `build/sol-xx_v4.5.2.zip`, `build/sol-xx_v8.0.zip`, `build/sol-xx_v9.0.zip` or `build/sol-xx_v10.0.zip` was correctly created and can be opened with your IDE.
 
 # Comments
 
@@ -177,7 +154,7 @@ The makefile is actually very simple, it creates the `.sln`, `.csproj` and `.cs`
            └── <Class>.cs	     (Optional, can be repeated)
 ```
 
-and only create the .csproj file for the v9.0 and v10.0 frameworks.
+and only create the .csproj file for the v8.0 and higher frameworks.
 
 This is for very simple projects (such as the ones used for pedagogical purposes in [this introduction to programming](https://princomp.github.io/) course), with portability in mind.
 
