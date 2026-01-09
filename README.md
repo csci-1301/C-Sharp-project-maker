@@ -177,6 +177,7 @@ Version | OS | IDE | IDE Version | .Net Core SDK Version | .Net Core Runtime Ver
 4.5.2 | MacOs Sonoma (14.1.1) | Visual Studio for Mac | 2022 | 7.0.308 | 7.0.11
 4.5.2 | Windows 11 | Visual Studio | 2022 | - | - 
 4.5.2 | Windows 10 Entreprise (22h2) | Visual Studio | Entreprise 2019 | 5.0.302 | 5.0.8
+8.0 | Windows 11 | Code | 1.108.0 | 8.0.416 | 8.0.22
 9.0 | MacOs Darwin (26.2) | Code | n/a | 9.0.112 | 9.0.112 
 9.0 | Debian 13 | Code | 1.108.0 | 9.0.308 | 9.0.11
 10.0 | Debian 13 | Code | 1.108.0 | 10.0.101 | 10.0.1
