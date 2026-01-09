@@ -141,7 +141,7 @@ To create a new project:
 
 - Create a folder in `src/` and name it after the _solution_ (say, `sol-xx`),
 - Create a folder in `src/sol-xx` and name it after the _project_ (say, `proj-yy`),
-- Create a `Program.cs` file (mandatory), and, possibly, one (or multiple) class files (called, for instance, `Class1.cs`, `Class2.cs`, etc., [except that you can't actually use those names](https://github.com/csci-1301/C-Sharp-project-maker/issues/1)).
+- Create a `Program.cs` file (mandatory), and, possibly, one (or multiple) class files (called, for instance, `Class1.cs`, `Class2.cs`, etc., ([yes, that would work](https://github.com/csci-1301/C-Sharp-project-maker/issues/1))).
 - Run 
     
     ```
