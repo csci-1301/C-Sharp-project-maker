@@ -11,7 +11,7 @@ This is a simple Makefile that creates C# projects compatible with any OS / IDE 
 
 ### For the v4.5.2 Version
 
-1. Grab [the `solution_name_v4.5.2.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/files/13906926/solution_name_v4.5.2.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+1. Grab [the `solution_name_v4.5.2.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.1/solution_name_v4.5.2.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
 2. Extract `solution_name_v4.5.2.zip`,
 4. Open `solution_name/solution_name.sln` with your favorite IDE,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
@@ -23,11 +23,25 @@ This is a simple Makefile that creates C# projects compatible with any OS / IDE 
 
 Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
 
+### For the v9.0 Version
+
+1. Grab [the `solution_name_v9.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/files/13906926/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+2. Extract `solution_name_v9.0.zip`,
+4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
+5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
+    
+    ```
+    10
+    Hello from Class2
+    ```
+
+Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
+
 ### For the v10.0 Version
 
-1. Grab [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/files/13906926/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+1. Grab [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.1/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
 2. Extract `solution_name_v10.0.zip`,
-4. Open `solution_name/solution_name.sln` with your favorite IDE,
+4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
     
     ```
@@ -81,12 +95,36 @@ To run the example,
 1. Run
 
     ```
+    make build/solution_name_v9.0.zip
+    ```
+
+2. Look into the `build/` folder that was created for a `solution_name_v9.0.zip` file.
+3. Extract `solution_name_v9.0.zip`,
+4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
+5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
+    
+    ```
+    10
+    Hello from Class2
+    ```
+
+Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
+
+
+### For the v10.0 Version
+
+To run the example, 
+
+0. (Download or clone this program.)
+1. Run
+
+    ```
     make build/solution_name_v10.0.zip
     ```
 
 2. Look into the `build/` folder that was created for a `solution_name_v10.0.zip` file.
 3. Extract `solution_name_v10.0.zip`,
-4. Open `solution_name/solution_name.sln` with your favorite IDE,
+4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
     
     ```
@@ -109,6 +147,12 @@ To create a new project:
     ```
     make build/sol-xx_v4.5.2.zip
     ```
+
+    or 
+    
+    ```
+    make build/sol-xx_v9.0.zip
+    ```
     
     or 
     
@@ -116,7 +160,7 @@ To create a new project:
     make build/sol-xx_v10.0.zip
     ```
     
-- Check that the file `build/sol-xx_v4.5.2.zip` or `build/sol-xx_v10.0.zip` was correctly created and can be opened with your IDE.
+- Check that the file `build/sol-xx_v4.5.2.zip`, `build/sol-xx_v9.0.zip` or `build/sol-xx_v10.0.zip` was correctly created and can be opened with your IDE.
 
 # Comments
 
@@ -133,7 +177,7 @@ The makefile is actually very simple, it creates the `.sln`, `.csproj` and `.cs`
            └── <Class>.cs	     (Optional, can be repeated)
 ```
 
-and only create the .csproj file for the v10.0 framework.
+and only create the .csproj file for the v9.0 and v10.0 frameworks.
 
 This is for very simple projects (such as the ones used for pedagogical purposes in [this introduction to programming](https://princomp.github.io/) course), with portability in mind.
 
@@ -156,7 +200,7 @@ Version | OS | IDE | IDE Version | .Net Core SDK Version | .Net Core Runtime Ver
 4.5.2 | MacOs Sonoma (14.1.1) | Visual Studio for Mac | 2022 | 7.0.308 | 7.0.11
 4.5.2 | Windows 11 | Visual Studio | 2022 | - | - 
 4.5.2 | Windows 10 Entreprise (22h2) | Visual Studio | Entreprise 2019 | 5.0.302 | 5.0.8
-10.0 | Debian 13 | Code 1.108.0 | 10.0.101 | 10.0.1
+10.0 | Debian 13 | Code | 1.108.0 | 10.0.101 | 10.0.1
 
 # Reporting Data
 
