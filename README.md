@@ -134,7 +134,6 @@ To run the example,
 
 Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
 
-    
 # Instructions to Create a New Project
 
 To create a new project:
@@ -200,6 +199,8 @@ Version | OS | IDE | IDE Version | .Net Core SDK Version | .Net Core Runtime Ver
 4.5.2 | MacOs Sonoma (14.1.1) | Visual Studio for Mac | 2022 | 7.0.308 | 7.0.11
 4.5.2 | Windows 11 | Visual Studio | 2022 | - | - 
 4.5.2 | Windows 10 Entreprise (22h2) | Visual Studio | Entreprise 2019 | 5.0.302 | 5.0.8
+9.0 | MacOs Darwin (26.2) | Code | n/a | 9.0.112 | 9.0.112 
+9.0 | Debian 13 | Code | 1.108.0 | 9.0.308 | 9.0.11
 10.0 | Debian 13 | Code | 1.108.0 | 10.0.101 | 10.0.1
 
 # Reporting Data
