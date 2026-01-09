@@ -31,7 +31,7 @@ Please, open an issue if you cannot reproduce this behavior or if your IDE did n
 
     - [the `solution_name_v8.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.3/solution_name_v8.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
     - [the `solution_name_v9.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.3/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
-    - [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.3/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+    - [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.3/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
     
 2. Extract the zip file you downloaded,
 4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
