@@ -35,7 +35,7 @@ Please, open an issue if you cannot reproduce this behavior or if your IDE did n
     - [the `solution_name_v8.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name_v8.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
     - [the `solution_name_v9.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
     - [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
-    - [the `solution_name.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+    - [the `solution_name_v8.0_roll_forward.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name_v8.0_roll_forward.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
     
 2. Extract the zip file you downloaded,
 4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
@@ -95,10 +95,10 @@ To run the example,
     make build/solution_name_v8.0.zip
     make build/solution_name_v9.0.zip
     make build/solution_name_v10.0.zip
-    make build/solution_name.zip
+    make build/solution_name_v8.0_roll_forward.zip
     ```
 
-2. Look into the `build/` folder that was created for a `solution_name_v8.0.zip`, `solution_name_v9.0.zip`, `solution_name_v10.0.zip` or `solution_name.zip` file.
+2. Look into the `build/` folder that was created for a `solution_name_v8.0.zip`, `solution_name_v9.0.zip`, `solution_name_v10.0.zip` or `solution_name_v8.0_roll_forward.zip` file.
 3. Extract the zip file,
 4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
@@ -145,11 +145,11 @@ To create a new project:
     or 
     
     ```
-    make build/sol-xx.zip
+    make build/sol-xx_v8.0_roll_forward.zip
     ```
     
     
-- Check that the file `build/sol-xx_v4.5.2.zip`, `build/sol-xx_v8.0.zip`, `build/sol-xx_v9.0.zip`, `build/sol-xx_v10.0.zip` or  `build/sol-xx.zip`  was correctly created and can be opened with your IDE.
+- Check that the file `build/sol-xx_v4.5.2.zip`, `build/sol-xx_v8.0.zip`, `build/sol-xx_v9.0.zip`, `build/sol-xx_v10.0.zip` or  `build/sol-xx_v8.0_roll_forward.zip`  was correctly created and can be opened with your IDE.
 
 # Comments
 

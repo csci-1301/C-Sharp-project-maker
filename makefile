@@ -9,14 +9,13 @@ clean:
 # <StartupObject>Program</StartupObject>
 # <RootNamespace>$(notdir $*)</RootNamespace>
 
-build/%.zip: src/%/*/*.cs
+build/%_v8.0_roll_forward.zip: src/%/*/*.cs
 	@(printf '<Project Sdk="Microsoft.NET.Sdk">\n	<PropertyGroup>\n		<OutputType>Exe</OutputType>\n		<TargetFramework>net8.0</TargetFramework>\n		<RollForward>LatestMajor</RollForward>\n		\n</PropertyGroup>\n</Project>') > $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj 
 # We now zip the folder:
 	@cd $(dir $(patsubst %/,%,$(dir $<)))../ && 7z -bso0 -bsp0 a ../$@ $(notdir $*)*  -xr\!.vs -xr\!.directory
 # We compress (silently, thanks to the -bso0 -bsp0 options) the folder containing the csproj and the code
-# Finally, we clean the files:
+# Finally, we clean the files:c
 	@rm $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj
-
 
 build/%_v8.0.zip: src/%/*/*.cs
 	@(printf '<Project Sdk="Microsoft.NET.Sdk">\n	<PropertyGroup>\n    <OutputType>Exe</OutputType>\n    <TargetFramework>net8.0</TargetFramework>\n    <ImplicitUsings>enable</ImplicitUsings>\n    <Nullable>enable</Nullable>\n  </PropertyGroup>\n \n</Project>') > $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj 
