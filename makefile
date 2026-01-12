@@ -1,4 +1,4 @@
-default: build/solution_name_v4.5.2.zip build/solution_name_v8.0.zip build/solution_name_v9.0.zip build/solution_name_v10.0.zip build/solution_name.zip
+default: build/solution_name_v4.5.2.zip build/solution_name_v8.0.zip build/solution_name_v9.0.zip build/solution_name_v10.0.zip build/solution_name_v8.0_roll_forward.zip
 
 clean: 
 	rm -rf build/
