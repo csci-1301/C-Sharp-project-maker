@@ -5,7 +5,10 @@ This is a simple Makefile that creates C# projects compatible with any OS / IDE 
 - One project uses the "v4.5.2" `TargetFrameworkVersion`,
 - One project uses "net8.0" `TargetFramework`,
 - One project uses "net9.0" `TargetFramework`,
-- One project uses "net10.0" `TargetFramework`.
+- One project uses "net10.0" `TargetFramework`,
+- One project uses "net8.0" `TargetFramework` and the `RollForward` to be forward-compatible.
+
+The "8.0 `RollForward`" version should be the one used by default.
 
 # Testing the Project and the C# Project Maker
 
@@ -13,7 +16,7 @@ This is a simple Makefile that creates C# projects compatible with any OS / IDE 
 
 ### For the v4.5.2 Version
 
-1. Grab [the `solution_name_v4.5.2.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.3/solution_name_v4.5.2.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+1. Grab [the `solution_name_v4.5.2.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name_v4.5.2.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
 2. Extract `solution_name_v4.5.2.zip`,
 4. Open `solution_name/solution_name.sln` with your favorite IDE,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
@@ -25,13 +28,14 @@ This is a simple Makefile that creates C# projects compatible with any OS / IDE 
 
 Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
 
-### For the v8.0, v9.0 and v10.0 Versions
+### For the v8.0, v9.0, v10.0 and v8.0 `RollForward` Versions
 
 1. Grab either
 
-    - [the `solution_name_v8.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.3/solution_name_v8.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
-    - [the `solution_name_v9.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.3/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
-    - [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.3/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+    - [the `solution_name_v8.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name_v8.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+    - [the `solution_name_v9.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name_v9.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+    - [the `solution_name_v10.0.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name_v10.0.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
+    - [the `solution_name.zip` file](https://github.com/csci-1301/C-Sharp-project-maker/releases/download/1.0.4/solution_name.zip) from our [release](https://github.com/csci-1301/C-Sharp-project-maker/releases),
     
 2. Extract the zip file you downloaded,
 4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
@@ -80,7 +84,7 @@ To run the example,
 
 Please, open an issue if you cannot reproduce this behavior or if your IDE did not open correctly the project, or [report to us](#reporting-data) if your OS / IDE / .Net version combination is not [listed below](#tested-on).
 
-### For the v8.0, v9.0 and v10.0 Versions
+### For the v8.0, v9.0, v10.0 and v8.0 `RollForward` Versions
 
 To run the example, 
 
@@ -91,9 +95,10 @@ To run the example,
     make build/solution_name_v8.0.zip
     make build/solution_name_v9.0.zip
     make build/solution_name_v10.0.zip
+    make build/solution_name.zip
     ```
 
-2. Look into the `build/` folder that was created for a `solution_name_v8.0.zip`, `solution_name_v9.0.zip` or `solution_name_v10.0.zip` file.
+2. Look into the `build/` folder that was created for a `solution_name_v8.0.zip`, `solution_name_v9.0.zip`, `solution_name_v10.0.zip` or `solution_name.zip` file.
 3. Extract the zip file,
 4. Open the `solution_name/project_name/` folder with your favorite IDE, or `cd` there with you terminal,
 5. Make sure you can compile and execute `Program.cs`. Normally, the program should display
@@ -136,8 +141,15 @@ To create a new project:
     ```
     make build/sol-xx_v10.0.zip
     ```
+
+    or 
     
-- Check that the file `build/sol-xx_v4.5.2.zip`, `build/sol-xx_v8.0.zip`, `build/sol-xx_v9.0.zip` or `build/sol-xx_v10.0.zip` was correctly created and can be opened with your IDE.
+    ```
+    make build/sol-xx.zip
+    ```
+    
+    
+- Check that the file `build/sol-xx_v4.5.2.zip`, `build/sol-xx_v8.0.zip`, `build/sol-xx_v9.0.zip`, `build/sol-xx_v10.0.zip` or  `build/sol-xx.zip`  was correctly created and can be opened with your IDE.
 
 # Comments
 
@@ -158,13 +170,15 @@ and only create the .csproj file for the v8.0 and higher frameworks.
 
 This is for very simple projects (such as the ones used for pedagogical purposes in [this introduction to programming](https://princomp.github.io/) course), with portability in mind.
 
-Despite the following source and discussions:
+Despite the following sources and discussions:
 
 - <https://learn.microsoft.com/en-us/visualstudio/ide/solutions-and-projects-in-visual-studio?view=vs-2022>,
 - <https://stackoverflow.com/questions/2736260/programmatically-generate-visual-studio-solution>,
 - <https://learn.microsoft.com/en-us/dotnet/core/porting/project-structure>,
+- <https://learn.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-properties>,
+- <https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props>
 
-there are no specification (that we know of) for C# projects, hence the need for this type of approach.
+there are no specification (that we know of) for C# projects that is stable through releases, hence the need for this type of approach.
 
 # Tested on
 

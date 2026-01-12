@@ -1,10 +1,21 @@
-default: build/solution_name_v4.5.2.zip build/solution_name_v8.0.zip build/solution_name_v9.0.zip build/solution_name_v10.0.zip
+default: build/solution_name_v4.5.2.zip build/solution_name_v8.0.zip build/solution_name_v9.0.zip build/solution_name_v10.0.zip build/solution_name.zip
 
 clean: 
 	rm -rf build/
 	rm -rf src/*/*.sln
 	rm -rf src/*/*/Properties src/*/*/bin src/*/*/obj
 	rm -rf src/*/*/*.csproj
+
+# <StartupObject>Program</StartupObject>
+# <RootNamespace>$(notdir $*)</RootNamespace>
+
+build/%.zip: src/%/*/*.cs
+	@(printf '<Project Sdk="Microsoft.NET.Sdk">\n	<PropertyGroup>\n		<OutputType>Exe</OutputType>\n		<TargetFramework>net8.0</TargetFramework>\n		<RollForward>LatestMajor</RollForward>\n		\n</PropertyGroup>\n</Project>') > $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj 
+# We now zip the folder:
+	@cd $(dir $(patsubst %/,%,$(dir $<)))../ && 7z -bso0 -bsp0 a ../$@ $(notdir $*)*  -xr\!.vs -xr\!.directory
+# We compress (silently, thanks to the -bso0 -bsp0 options) the folder containing the csproj and the code
+# Finally, we clean the files:
+	@rm $(dir $<)$(notdir $(patsubst %/,%,$(dir $<))).csproj
 
 
 build/%_v8.0.zip: src/%/*/*.cs
